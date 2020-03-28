@@ -51,12 +51,12 @@ user_input () {
             generate_menu "$($K get ns -o name | cut -d'/' -f2)" result
             if [[ ! -z $result ]] && [[ $result != "" ]]; then
                 NAMESPACE=$result
-                echo "Switched to namespace $NAMESPACE"
+                echo "Switched to namespace \"$NAMESPACE\""
                 result=""
             fi
         elif [[ $input = "/ns "* ]]; then
             NAMESPACE=$(echo $input | cut -d' ' -f2)
-            echo "Switched to namespace $NAMESPACE"
+            echo "Switched to namespace \"$NAMESPACE\""
         elif [[ $input = "/q" ]] || [[ $input = "/quit" ]]; then
             echo "Goodbye!"
             exit 0
