@@ -111,6 +111,32 @@ Switched to namespace "jenkins"
 aks-testing > jenkins >
 ```
 
+Simply omitting the namespace name will produce a menu of namespaces to select from.
+<br>
+Example:
+```
+aks-testing > jenkins > /ns
+
+1 - app1
+2 - cert-manager
+3 - default
+4 - ghost
+5 - ingress-nginx
+6 - jenkins
+7 - jenkinsx
+8 - kube-node-lease
+9 - kube-ops-view
+10 - kube-public
+11 - kube-system
+12 - metallb-system
+13 - nexus
+14 - spinnaker
+
+Enter a number between 1 and 14:
+```
+
+Entering `6` for example will select the context `Jenkins`.
+
 You can then run any normal `kubectl` command as follows
 
 ```
@@ -121,7 +147,7 @@ aks-testing > jenkins >
 ```
 
 ---
-Kuber can be exited at any time using the `/q` or `/quit` commands. For a list of available commands use `/?` `/help`, you will see the following
+Kuber can be terminated at any time using the `/q` or `/quit` commands. For a list of available commands use `/?` `/help`, you will see the following
 
 ```
 Available Kuber commands:
